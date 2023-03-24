@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changer la couleur d'arrière-plan</title>
+    <script>
+      function changeColor() {
+        // Générer une couleur aléatoire en utilisant des valeurs RGB
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+        var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+
+        // Changer la couleur d'arrière-plan
+        document.body.style.backgroundColor = color;
+
+        // Afficher le code HTML de la couleur
+        var htmlCode = "<p>Le code HTML de la couleur est: <code>" + color + "</code></p>";
+        document.getElementById("html-code").innerHTML = htmlCode;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Changer la couleur d'arrière-plan</h1>
+    <p>Cliquez sur le bouton pour changer la couleur:</p>
+    <button onclick="changeColor()">Changer la couleur</button>
+    <div id="html-code"></div>
+  </body>
+</html>
